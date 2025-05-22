@@ -1,0 +1,27 @@
+body {
+    background-color: #f9f6f2;
+    font-family: 'Georgia', serif;
+    color: #3e3e3e;
+    margin: 0;
+    padding: 40px;
+}
+.container {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+h1, h2 {
+    font-weight: normal;
+}
+a {
+    color: #5c4d7d;
+    text-decoration: none;
+}
+a.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e2d9f3;
+    border-radius: 6px;
+    font-weight: bold;
+}
