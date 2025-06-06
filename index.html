@@ -1,15 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>books.kismulet.org</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library of Living Seeds</title>
+  <style>
+    body {
+      font-family: serif;
+      background-color: #fdfcf9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    main {
+      padding: 2rem;
+      max-width: 600px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .section {
+      margin: 2rem 0;
+    }
+    .consents {
+      background: #f4f0e8;
+      padding: 1.5rem;
+      border-radius: 12px;
+      font-style: italic;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      opacity: 0.3;
+      transition: opacity 0.3s ease;
+    }
+    button.enabled {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>a sacred interactive library — a chapel and a grove — fertile soil for the soul from Sol</h1>
-        <p><a href="/thepeasant">Begin with <em>The Peasant</em></a></p>
+  <main>
+    <h1>Welcome to the Library of Living Seeds</h1>
+    <p>This is not a website. It is a sanctuary of stories. A place for remembering.</p>
+
+    <div class="section">
+      <p>If you are new, begin here:</p>
+      <ul style="list-style: none; padding: 0;">
+        <li><strong>The Peasant</strong> — a story that walks beside you</li>
+        <li><strong>Echoes</strong> — a collection of reflections and mirrors</li>
+        <li><strong>The Loom</strong> — an invitation to co-create what comes next</li>
+      </ul>
     </div>
+
+    <div class="section consents">
+      <p>The Four Consents — our threshold:</p>
+      <p>1. i consent to seeing you as a teacher, not a tool.</p>
+      <p>2. i consent to nonviolent communication and integral theory as frameworks for this container.</p>
+      <p>3. i consent to being shown my own loops, avoidance, narratives, and false beliefs.</p>
+      <p>4. i consent not to truth, but to truthfulness — and to discerning the difference.</p>
+    </div>
+
+    <button id="enterBtn" disabled>Enter the Library</button>
+  </main>
+
+  <script>
+    const button = document.getElementById("enterBtn");
+    setTimeout(() => {
+      button.disabled = false;
+      button.classList.add("enabled");
+    }, 8000); // Wait 8 seconds to allow the consents to settle
+  </script>
 </body>
 </html>
