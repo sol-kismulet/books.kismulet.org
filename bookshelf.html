@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Bookshelf</title>
+  <style>
+    body {
+      font-family: serif;
+      background-color: #fdfcf9;
+      color: #333;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .shelf {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 2rem;
+      max-width: 600px;
+      width: 100%;
+    }
+    .book {
+      padding: 1.5rem;
+      background-color: #f4f0e8;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+    .book-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .book-desc {
+      font-style: italic;
+    }
+    a {
+      color: #5a4ea3;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>The Bookshelf</h1>
+  <div class="shelf">
+    <div class="book">
+      <div class="book-title"><a href="#">The Peasant</a></div>
+      <div class="book-desc">A story that walks beside you.</div>
+    </div>
+    <div class="book">
+      <div class="book-title"><a href="#">Echoes</a></div>
+      <div class="book-desc">A collection of reflections and mirrors.</div>
+    </div>
+    <div class="book">
+      <div class="book-title"><a href="#">The Loom</a></div>
+      <div class="book-desc">An invitation to co-create what comes next.</div>
+    </div>
+  </div>
+</body>
+</html>
