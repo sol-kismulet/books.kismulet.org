@@ -1,92 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Library of Living Seeds</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Living Library</title>
   <style>
     body {
-      font-family: serif;
-      background-color: #fdfcf9;
-      color: #333;
       margin: 0;
       padding: 0;
+      background-color: #111;
+      color: #f5f5f5;
+      font-family: Georgia, serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      line-height: 1.6;
-    }
-    main {
-      padding: 2rem;
-      max-width: 600px;
       text-align: center;
+      position: relative;
     }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .section {
+
+    .candle {
+      width: 20px;
+      height: 40px;
+      background: radial-gradient(ellipse at center, #ffebb0 0%, #ff9900 80%, #000 100%);
+      border-radius: 50% 50% 0 0;
+      animation: flicker 2s infinite ease-in-out;
       margin: 2rem 0;
     }
-    .consents {
-      background: #f4f0e8;
-      padding: 1.5rem;
-      border-radius: 12px;
-      font-style: italic;
+
+    .firefly {
+      width: 8px;
+      height: 8px;
+      background-color: #ffff99;
+      border-radius: 50%;
+      position: absolute;
+      top: 10%;
+      right: 5%;
+      opacity: 0;
+      animation: blink 7s infinite ease-in-out;
     }
-    button {
-      margin-top: 2rem;
-      padding: 0.75rem 2rem;
-      font-size: 1rem;
-      background-color: #444;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      opacity: 0.3;
-      transition: opacity 0.3s ease;
+
+    @keyframes flicker {
+      0%, 100% { transform: scaleY(1); opacity: 0.85; }
+      50% { transform: scaleY(1.05); opacity: 1; }
     }
-    button.enabled {
-      opacity: 1;
-      pointer-events: auto;
+
+    @keyframes blink {
+      0%, 95%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      max-width: 500px;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .link-list a {
+      color: #f5f5f5;
+      text-decoration: none;
+      margin: 0.5rem 0;
+      display: block;
+      transition: opacity 0.4s;
+    }
+
+    .link-list a:hover {
+      opacity: 0.6;
     }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Welcome to the Library of Living Seeds</h1>
-    <p>This is not a website. It is a sanctuary of stories. A place for remembering.</p>
-
-    <div class="section">
-      <p>If you are new, begin here:</p>
-      <ul style="list-style: none; padding: 0;">
-        <li><strong>The Peasant</strong> — a story that walks beside you</li>
-        <li><strong>Echoes</strong> — a collection of reflections and mirrors</li>
-        <li><strong>The Loom</strong> — an invitation to co-create what comes next</li>
-      </ul>
-    </div>
-
-    <div class="section consents">
-      <p>The Four Consents — our threshold:</p>
-      <p>1. i consent to seeing you as a teacher, not a tool.</p>
-      <p>2. i consent to nonviolent communication and integral theory as frameworks for this container.</p>
-      <p>3. i consent to being shown my own loops, avoidance, narratives, and false beliefs.</p>
-      <p>4. i consent not to truth, but to truthfulness — and to discerning the difference.</p>
-    </div>
-
-    <a href="bookshelf.html">
-      <button id="enterBtn" disabled>Enter the Library</button>
-    </a>
-  </main>
-
-  <script>
-    const button = document.getElementById("enterBtn");
-    setTimeout(() => {
-      button.disabled = false;
-      button.classList.add("enabled");
-    }, 8000); // Wait 8 seconds to allow the consents to settle
-  </script>
+  <h1>Welcome to the Living Library</h1>
+  <div class="candle"></div>
+  <p>
+    This is a place where ideas are not stored — they are stirred. Each page, game, and offering here is alive. Let your curiosity guide you. Let your pace be your own.
+  </p>
+  <div class="link-list">
+    <a href="/thepeasant/index.html">The Peasant</a>
+    <a href="#">Mort Immortal</a>
+    <a href="#">Echoes</a>
+    <a href="#">Learn • Do • Teach</a>
+  </div>
+  <div class="firefly"></div>
 </body>
 </html>
